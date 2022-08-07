@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de números</title>
+</head>
+<body>
+    <script>
+        var numero9 = window.prompt('Digite o numero de seu estado sendo: 1 – DF, GO, MS, MT e TO. 2 – AC, AM, AP, PA, RO e RR. 3 – CE, MA e PI. 4 – AL, PB, PE, RN. 5 – BA e SE. 6 – MG. 7 – ES e RJ. 8 – SP. 9 – PR e SC. 0 – RS ');
+        var numero = 0
+        var lista = []
+for(var indice = 1; indice<=8; indice++){
+    numero = Math.random(0, 9);
+            numero = numero*10
+            numero = Math.round(numero);
+            if(numero==10){
+            numero = 0
+            }
+            lista.push(numero)
+            
+            document.write(numero+"<br>");
+            
+}
+lista.push(numero9)
+            var numero10 = ((lista[0]*10)+(lista[1]*9)+(lista[2]*8)+(lista[3]*7)+(lista[4]*6)+(lista[5]*5)+(lista[6]*4)+(lista[7]*3)+(lista[8]*2))%11
+            if(numero10<=1){
+                numero10 = 0
+            } else{
+                numero10 = 11-numero10
+            }
+lista.push(numero10)
+            var numero11 = ((lista[1]*10)+(lista[2]*9)+(lista[3]*8)+(lista[4]*7)+(lista[5]*6)+(lista[6]*5)+(lista[7]*4)+(lista[8]*3)+(lista[9]*2))%11
+            if(numero11<=1){
+                numero11 = 0
+            } else{
+                numero11 = 11-numero11
+            }
+
+lista.push(numero11)
+document.write(lista)
+
+
+
+
+
+    </script>
+</body>
+</html>

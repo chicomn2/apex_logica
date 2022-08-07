@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function botaoclicado(){
+           let nota1 = partseFloat(document.getElementById("nota1").value);
+           let nota2 = partseFloat(document.getElementById("nota2").value);
+           let media = (nota1+nota2)/2
+           alert(media);
+        }
+    </script>
+    <form>
+        <input type="number" placeholder="Primeira Nota" id="nota1">
+        <input type="number"placeholder="Segunda Nota" id="nota2">
+        <input type="button" value="Verificar" onclick="botaoclicado()">
+    </form>
+</body>
+</html>

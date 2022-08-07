@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<body>
+    <script>
+        var quantidade = prompt('Digite o Valor a ser convertido');
+        quantidade = parseFloat(quantidade);
+        if(isNaN(quantidade)){
+            document.write('<h1>Você não digitou um número Válido</h1>');
+        } else{
+        var moeda1 = prompt('Digite qual moeda original entre "Dolar", "Euro", "Real" e "Peso Mexicano"');
+        moeda1 = moeda1.toLowerCase;
+        var moeda2 = prompt('Digite para qual moeda você quer converter');
+        moeda2 = moeda2.toLowerCase;
+        var resultante = 0
+        var valorEuro = 6
+        var valorDolar = 5
+        var valorPeso = 0.25
+        
+        switch (moeda1){
+            case "real":
+                switch (moeda2){
+                    case "dolar": 
+                    resultante = quantidade/valorDolar;
+                    break;
+                    
+                    case "euro": 
+                    resultante = quantidade/valorEuro;
+                    break;
+
+                    case "peso mexicano": 
+                    resultante = quantidade/valorPeso;
+                    break;
+
+                    default:
+                    document.write('Você não digitou moedas válidas');
+                }
+            case "euro":
+                    switch (moeda2){
+                    case "dolar": 
+                    resultante = quantidade/valorDolar;
+                    break;
+                    
+                    case "euro": 
+                    resultante = quantidade/valorEuro;
+                    break;
+
+                    case "peso mexicano": 
+                    resultante = quantidade/valorPeso;
+                    break;
+
+                    default:
+                    document.write('Você não digitou moedas válidas');
+                }
+
+        }
+        }</script>
+    
+</body>
+</html>

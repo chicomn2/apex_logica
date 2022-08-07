@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch And While</title>
+</head>
+<body>
+    <script>
+        var votosLucas = 0
+        var votosPamela = 0
+        var votosDiego = 0
+        var votosInvalidos = 0
+
+
+        while(votosDiego<3&&votosPamela<3&&votosLucas<3&&votosInvalidos<3){
+        var voto = prompt('Digite o seu voto entre "Lucas", "Pâmela" e "Diego"');
+        voto = voto.toLowerCase();
+        
+
+        switch(voto){
+            case 'lucas':
+            votosLucas++
+            break;
+
+            case 'pâmela':
+            votosPamela++
+            break;
+
+            case 'diego': 
+            votosDiego++
+            break
+
+            default:
+            votosInvalidos++
+
+        }
+
+        }
+        document.write("O Lucas possui "+votosLucas+"<br>");
+        document.write("A Pâmela possui "+votosPamela+"<br>");
+        document.write("O Diego Possúi "+votosDiego+"<br>");
+        if(votosInvalidos==3){
+            document.write('<h1> A eleição está ANULADA!</H1>')
+        } else if(votosLucas==3)
+        {document.write('<h1> Lucas ganhou a eleição!</H1>')
+        } else if(votosPamela==3)
+        {document.write('<h1> Pâmela ganhou a eleição!</H1>')
+        } else if(votosDiego==3)
+        {document.write('<h1> Diego ganhou a eleição!</H1>')
+        }
+
+
+    </script>
+</body>
+</html>

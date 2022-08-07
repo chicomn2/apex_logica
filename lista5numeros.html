@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 números</title>
+</head>
+<body>
+    <script>
+       let lista = []
+       let soma = 0
+        for(let indice = 0; indice<5; indice++){
+            lista.push(parseFloat(prompt('Informe um número')))
+        }
+
+        for(indice = 0; indice<lista.length; indice++){
+            document.write(lista[indice]+", ")
+        }
+        document.write('<br>')
+        for(indice = 0; indice<lista.length; indice++){
+            soma += (lista[indice])
+            
+        }
+        document.write("A soma deu "+soma)
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetores</title>
+</head>
+<body>
+    <script>
+        var nomes = []
+        
+        while(nomes.length<6){
+            nomes.push(prompt("Inclua um nome"))}
+            document.write(nomes)
+            nomes.splice(4, 1);
+            nomes[0] = "Francisco";
+    for (var lista = 0; lista <nomes.length; lista++) {
+       document.write("<h1>"+(lista+1)+'-'+nomes[lista]+"<br></h1>"); 
+    }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Comparação de números</title>
+</head>
+<body>
+    <script>
+        var nota1 = window.prompt('Digite um número qualquer');
+        var nota2 = window.prompt('Digite outro número qualquer');
+        nota1 = parseFloat(nota1);
+        nota2 = parseFloat(nota2);
+
+        if(isNaN(nota1) || isNaN(nota2)){
+            document.write('<h1>Você não digitou os números corretamente</h1>');
+        } else if(nota1==nota2){
+            document.write('<h1>' + (nota1+nota2) + '</h1>');
+        } else {
+            document.write('<h1>'+nota1*nota2+'</h1>');
+        }
+
+    </script>
+</body>
+</html>
